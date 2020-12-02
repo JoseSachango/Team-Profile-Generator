@@ -1,0 +1,24 @@
+{
+  "name": "Team-Profile-Generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "READMEGenerator.js",
+  "scripts": {
+    "test": "jest --verbose test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseSachango/Team-Profile-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoseSachango/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/JoseSachango/Team-Profile-Generator#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3",
+    "jest": "^24.8.0"
+  }
+}
