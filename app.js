@@ -116,7 +116,7 @@ function InternPrompt(){
                 var renderHtml = render(EmployeeObjects);
                 fs.writeFile(outputPath,renderHtml,(err)=>console.log(err));
                 console.log(EmployeeObjects);
-
+                
                 return 
             }
             else if(response.addEmployees==="Engineer"){
