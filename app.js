@@ -48,6 +48,12 @@ function EngineerPrompt(){
         }
 
     ]).then((response)=>{
+
+            var EngineerObject = new Engineer(response.Name,response.id,response.email,response.gitHub)
+
+            
+
+            EmployeeObjects.push(EngineerObject)
         
 
             if(response.addEmployees==="I don't wnat to add any more team members."){
@@ -55,6 +61,7 @@ function EngineerPrompt(){
                 var renderHtml = render(EmployeeObjects);
                 fs.writeFile(outputPath,renderHtml,(err)=>console.log(err));
                 console.log(EmployeeObjects);
+                console.log("The last employee was : "+response.name);
 
                 return 
             }
@@ -68,11 +75,7 @@ function EngineerPrompt(){
                 InternPrompt();
             }
         
-        var EngineerObject = new Engineer(response.Name,response.id,response.email,response.gitHub)
-
-        
-
-        EmployeeObjects.push(EngineerObject)
+       
     })
     
 };
@@ -110,13 +113,18 @@ function InternPrompt(){
         }
 
     ]).then((response)=>{
-        
+
+            var InternObject = new Intern(response.Name,response.id,response.email,response.school)
+            
+            EmployeeObjects.push(InternObject)
+            
+
             if(response.addEmployees==="I don't wnat to add any more team members."){
 
                 var renderHtml = render(EmployeeObjects);
                 fs.writeFile(outputPath,renderHtml,(err)=>console.log(err));
                 console.log(EmployeeObjects);
-                
+                console.log("The last employee was : "+response.name)
                 return 
             }
             else if(response.addEmployees==="Engineer"){
@@ -129,9 +137,7 @@ function InternPrompt(){
                 InternPrompt();
             }
         
-        var InternObject = new Intern(response.Name,response.id,response.email,response.school)
-          
-        EmployeeObjects.push(InternObject)
+       
     })
 }
 
@@ -183,6 +189,7 @@ function ManagerPrompt(){
                     var renderHtml = render(EmployeeObjects);
                     fs.writeFile(outputPath,renderHtml,(err)=>console.log(err));
                     console.log(EmployeeObjects);
+                    console.log("The last employee was : "+response.name)
                     
                     
                     return 
