@@ -17,7 +17,7 @@
     No installation required.
 ## Usage
     In your GitBash terminal run the command "node app.js". You will be prompted with a series of questions, answers all of the questions to create profiles for individual team members. See video below for reference.
-[![Watch the video](https://imgur.com/FYzygJM)](https://youtu.be/5bDFPVBvL9E)
+[![Watch the video](https://imgur.com/FYzygJM.png)](https://youtu.be/5bDFPVBvL9E)
 ## Credits
     N/A
 ## License
